@@ -20,7 +20,7 @@ const Hero = () => {
 
         <div className="flex justify-center items-center mt-8  absolute top-0 w-[100%] ">
           <Image
-            src="/Laptop.svg"
+            src="/laptop.svg"
             alt="hero"
             width={1000}
             height={1000}

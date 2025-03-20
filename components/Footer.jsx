@@ -35,7 +35,7 @@ const Footer = () => {
 
         <Marquee>
           <Image
-            src="/container.svg"
+            src="/Container.svg"
             alt="container"
             width={1000}
             height={1000}

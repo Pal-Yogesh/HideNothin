@@ -106,8 +106,6 @@
 // export default FAQ;
 
 import React, { useState, useRef, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Plus } from "lucide-react";
 
 const faqData = [
@@ -149,7 +147,6 @@ const FAQ = () => {
 
   
 
-  // Store the actual height of each content element
   useEffect(() => {
     const newHeights = {};
     contentRefs.current.forEach((ref, index) => {
