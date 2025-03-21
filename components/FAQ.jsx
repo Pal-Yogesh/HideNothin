@@ -104,7 +104,7 @@
 // };
 
 // export default FAQ;
-
+"use client"
 import React, { useState, useRef, useEffect } from "react";
 import { Plus } from "lucide-react";
 
@@ -162,7 +162,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="mt-32 mx-[4%] custombevietnam">
+    <div className="mt-22 mx-[4%] custombevietnam mb-10">
       <div className="flex justify-between">
         <h2 className="text-[20px] text-[#EC5B37] pb-10 w-[40%] pt-1">
           / <span className="text-[#202020]">some questions</span>

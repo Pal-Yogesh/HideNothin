@@ -116,7 +116,6 @@ const Footer = () => {
       <footer className="w-full pt-20 py-10  md:px-[4%] custombevietnam">
         <div className=" ">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          
             <div className="mb-6 md:mb-0 text-[32px]">
               <p className="text-[#202020]">+91 6262559141</p>
               <p className="text-[#202020] my-2">Hello@gmail.com</p>
@@ -207,7 +206,10 @@ const Footer = () => {
               <span className="text-[#202020]">Hidemship</span> | Designed by{" "}
               <span className="text-[#202020]">"Rakesh Ahirwar"</span>
             </div>
-            <div className="mt-4 md:mt-0">
+            <div
+              className="mt-4 md:mt-0"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               <div className="h-10 w-10 bg-gray-900 hover:bg-[#EC5B37] rounded-full flex items-center justify-center transition-colors duration-300 cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

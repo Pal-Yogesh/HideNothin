@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const About = () => {
+const AboutHero = () => {
   return (
     <>
       <div className="mt-28 flex gap-44 justify-center items-center text-center custombevietnam overflow-hidden">
@@ -40,4 +40,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutHero;

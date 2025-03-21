@@ -303,7 +303,7 @@ const Process = () => {
                     {solution.points.map((point, i) => (
                       <div key={i} className="flex items-center">
                         <Image
-                          src="/Star.svg"
+                          src="/star.svg"
                           alt="bullet"
                           width={13}
                           height={13}

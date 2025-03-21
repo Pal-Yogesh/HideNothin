@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -20,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <Image
-              src="./logo.svg"
+              src="/logo.svg"
               alt="logo"
               width={1000}
               height={1000}
@@ -33,7 +35,14 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8">
           {navItems.map((item) => (
             <Link key={item.name} href={item.path}>
-              <div className="text-[#202020] custombevietnam hover:text-[#FFFFFF] hover:bg-[#EC5B37] w-[80px] h-[40px] transition-colors duration-300 rounded-full flex justify-center items-center text-[14px]">
+              <div
+                className={`custombevietnam w-[80px] h-[40px] rounded-full flex justify-center items-center text-[14px] transition-colors duration-300 ${
+                  pathname === item.path
+                    ? "bg-[#EC5B37] text-white"
+                    : "text-[#202020] hover:text-[#FFFFFF] hover:bg-[#EC5B37]"
+                }`}
+              >
+                {" "}
                 {item.name}
               </div>
             </Link>
