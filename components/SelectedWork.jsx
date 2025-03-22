@@ -40,7 +40,7 @@ const SelectedWork = () => {
         </div>
 
         <div className="space-y-20">
-          <div data-aos="flip-down" data-aos-duration="3000">
+          <div data-aos="flip-down" >
             <Image
               src="/spectrumstudio.svg"
               alt="spectrumstudio"
@@ -49,22 +49,26 @@ const SelectedWork = () => {
               className="w-full h-full"
             />
           </div>
-          <div data-aos="flip-down" data-aos-duration="2000">
+          <div  data-aos="flip-down">
             <Image
+            
               src="/PrismPulse.svg"
               alt="spectrumstudio"
               width={1000}
               height={1000}
               className="w-full h-full"
+              priority
             />
           </div>
-          <div data-aos="flip-down" data-aos-duration="2000">
+          <div  data-aos="flip-down">
             <Image
+            
               src="/MosaicMotion.svg"
               alt="spectrumstudio"
               width={1000}
               height={1000}
               className="w-full h-full"
+              priority
             />
           </div>
         </div>

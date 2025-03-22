@@ -11,10 +11,11 @@ import { useEffect } from "react";
 
 const HomePages = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
+    if (typeof window !== "undefined") {
+      AOS.init({ duration: 1000 });
+    }
   }, []);
+
   return (
     <>
       <Hero />

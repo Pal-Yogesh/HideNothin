@@ -53,11 +53,11 @@ const AboutUS = () => {
   const timelineRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    if (typeof window !== "undefined") {
+      AOS.init({ duration: 1000 });
+    }
   }, []);
+  
 
   const timelineItems = timelineData.map((item, index) => {
     const { ref, inView } = useInView({
@@ -181,6 +181,7 @@ const AboutUS = () => {
                     height={1000}
                     alt="Services"
                     className="w-full h-full object-cover"
+                    priority
                   />
                 </div>
                 <div className="flex justify-between py-12 text-[#202020]">
