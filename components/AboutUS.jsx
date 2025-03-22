@@ -77,7 +77,7 @@ const AboutUS = () => {
         key={index}
         className=" duration-1000 text-[#202020] overflow-hidden"
         data-aos="fade-left"
-        data-aos-duration="2000"
+        
       >
         <h3 className=" text-[24px] mb-4">{item.title}</h3>
         <p className="text-[14px]">{item.description}</p>
@@ -174,7 +174,7 @@ const AboutUS = () => {
             <div key={index} className="">
               <div>
                 <div data-aos="flip-down"
-                data-aos-duration="1000">
+                data-aos-duration="2000">
                   <Image
                     src={service.image}
                     width={1000}
