@@ -12,7 +12,12 @@ import { useEffect } from "react";
 const HomePages = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      AOS.init({ duration: 1000 });
+      AOS.init({ 
+        offset: 200,
+        duration: 600,
+        easing: 'ease-in-sine',
+        delay: 1000,
+         });
     }
   }, []);
 

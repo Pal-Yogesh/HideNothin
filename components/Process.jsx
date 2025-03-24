@@ -176,7 +176,7 @@ const Process = () => {
 
         sections.forEach((section, index) => {
           const rect = section.getBoundingClientRect();
-          const sectionTop = rect.center + window.scrollY;
+          const sectionTop = rect.top + window.scrollY;
           const sectionBottom = sectionTop + rect.height;
 
           if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
