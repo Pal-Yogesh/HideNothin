@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import AnimateButton from "./AnimateButton";
 
 const Footer = () => {
   const navItems = [
@@ -25,9 +26,9 @@ const Footer = () => {
             </h2>
             <div className="flex justify-center items-center pt-10">
               <Link href="/contact">
-                <div className="text-white bg-[#EC5B37] hover:bg-[#d14d2b]  rounded-full text-[16px] flex justify-center items-center transition-colors duration-300 w-[120px] h-[42px]">
-                  Contact Us
-                </div>
+               <div>
+                <AnimateButton label="Contact Us"/>
+               </div>
               </Link>
             </div>
           </div>
@@ -135,8 +136,8 @@ const Footer = () => {
             <div className="">
               <div className="flex justify-end items-end">
                 <Link href="/contact">
-                  <div className="text-white bg-[#EC5B37] hover:bg-[#d14d2b]  rounded-full text-[16px] flex justify-center items-center transition-colors duration-300 w-[120px] h-[42px]">
-                    Contact Us
+                  <div>
+                    <AnimateButton label="Contact Us" />
                   </div>
                 </Link>
               </div>

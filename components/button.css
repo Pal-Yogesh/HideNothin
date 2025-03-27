@@ -1,0 +1,48 @@
+button {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #EC5B37;
+   }
+   
+   .default-btn,.hover-btn {
+    background-color: #EC5B37;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 20px;  
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 520; 
+    transition: all .3s ease;
+   }
+   
+   .hover-btn {
+    position: absolute;
+    inset: 0;
+    background-color: #EC5B37;
+    transform: translate(0%,100%);
+   }
+   
+   .default-btn span {
+    color: white;
+   }
+   
+   .hover-btn span {
+    color: white;
+   } 
+   
+   button:hover .default-btn {
+    transform: translate(0%,-100%);
+   }
+   
+   button:hover .hover-btn {
+    transform: translate(0%,0%);
+   }

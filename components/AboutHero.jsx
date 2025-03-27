@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import AnimateButton from "./AnimateButton";
 
 const AboutHero = () => {
   return (
@@ -24,8 +25,8 @@ const AboutHero = () => {
           </h2>
           <div className="flex justify-center items-center mt-20">
             <Link href="/contact">
-              <div className=" text-[16px] flex justify-center items-center bg-[#EC5B37] hover:bg-[#EC5B37] text-white w-[155px] h-[47px] rounded-full transition-colors duration-300">
-                Discover More
+              <div>
+                <AnimateButton label="Discover More" />
               </div>
             </Link>
           </div>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import AnimateButton from "./AnimateButton";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,9 +53,12 @@ const Navbar = () => {
         {/* Contact Us Button */}
         <div className="hidden md:block">
           <Link href="/contact">
-            <div className=" text-[16px] flex justify-center items-center bg-[#EC5B37] hover:bg-[#EC5B37] text-white w-[120px] h-[42px] rounded-full transition-colors duration-300">
+          <div>
+            <AnimateButton label="Contact Us" />
+          </div>
+            {/* <div className=" text-[16px] flex justify-center items-center bg-[#EC5B37] hover:bg-[#EC5B37] text-white w-[120px] h-[42px] rounded-full transition-colors duration-300">
               Contact Us
-            </div>
+            </div> */}
           </Link>
         </div>
 
