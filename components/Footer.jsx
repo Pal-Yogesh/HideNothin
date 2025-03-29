@@ -158,7 +158,7 @@ const Footer = () => {
               ))}
             </div>
 
-            <div className=" text-[32px] lg:hidden">
+            <div className=" text-[29.5px] lg:hidden">
               <p className="text-[#202020]">
                 <a href="tel:+917060362403" className="hover:underline">
                   +91 7060362403

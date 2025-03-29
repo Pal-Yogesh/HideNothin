@@ -63,15 +63,15 @@ const ContactUS = () => {
 
   return (
     <div className="mx-[4%] mt-8 text-[#202020]">
-      <h2 className="text-[96px] text-center bigshoulderdisplay">
+      <h2 className="text-[64px] md:text-[96px] text-center bigshoulderdisplay">
         Get In Touch
       </h2>
-      <div className="flex items-center justify-center pt-10">
+      <div className="md:flex items-center justify-center md:pt-10">
         <form
           onSubmit={handleSubmit}
-          className="w-[60%] px-14 py-20 space-y-10 bg-[#F4F5F5] rounded-3xl custombevietnam"
+          className="md:w-[60%] p-4 py-10 md:p-0 md:px-14 md:py-20 space-y-6 md:space-y-10 bg-[#F4F5F5] rounded-2xl custombevietnam"
         >
-          <div className="grid grid-cols-2 gap-6 ">
+          <div className="md:grid md:grid-cols-2 md:gap-6 space-y-6 ">
             <div>
               <label htmlFor="firstName" className="block mb-2 text-[18px]">
                 First Name <span className="text-[#EC5B37]">*</span>
@@ -83,7 +83,7 @@ const ContactUS = () => {
                 onChange={handleChange}
                 placeholder="John"
                 required
-                className="w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37] "
+                className="w-full md:w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37] "
               />
             </div>
             <div>
@@ -97,12 +97,12 @@ const ContactUS = () => {
                 onChange={handleChange}
                 placeholder="Smith"
                 required
-                className="w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37]"
+                className="w-full md:w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37]"
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="md:grid md:grid-cols-2 md:gap-6 space-y-6 ">
             <div>
               <label htmlFor="email" className="block mb-2 text-[18px]">
                 Email <span className="text-[#EC5B37]">*</span>
@@ -114,7 +114,7 @@ const ContactUS = () => {
                 onChange={handleChange}
                 placeholder="Enter your email"
                 required
-                className="w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37]"
+                className="w-full md:w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37]"
               />
             </div>
             <div>
@@ -128,7 +128,7 @@ const ContactUS = () => {
                 onChange={handleChange}
                 placeholder="1234567890"
                 maxLength={10}
-                className="w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37]"
+                className="w-full md:w-[345px] h-[51px] bg-white px-3  text-[16px] text-[#6A6C71]   rounded-md focus:outline-none focus:ring-2 focus:ring-[#EC5B37] focus:border-[#EC5B37]"
               />
             </div>
           </div>
@@ -154,7 +154,7 @@ const ContactUS = () => {
             >
               Submit
             </button> */}
-            <AnimateButton label="Submit"/>
+            <AnimateButton label="Submit" />
           </div>
         </form>
       </div>
