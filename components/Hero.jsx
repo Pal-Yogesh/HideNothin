@@ -31,7 +31,7 @@ const Hero = () => {
               <span className="text-[#EC5B37]"> Shine</span>!
             </h2>
           </div>
-          <h2 className="text-[16px] md:text-[20px] custombevietnam text-[#2020204d] pt-4 md:py-4 px-2 w-[90%] md:w-full">
+          <h2 className="text-[16px] md:text-[20px] custombevietnam text-[#2020204d] pt-4 md:py-4 px-4">
             Here designs speaks and technology performs - your brand&apos;s
             digital presence, redefined.
           </h2>
