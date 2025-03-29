@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import AnimateButton from "./AnimateButton";
 
 const ContactUS = () => {
   const [formData, setFormData] = useState({
@@ -147,12 +148,13 @@ const ContactUS = () => {
           </div>
 
           <div className="flex justify-end items-center">
-            <button
+            {/* <button
               type="submit"
               className=" w-[102px] h-[48px] text-white bg-[#EC5B37] rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               Submit
-            </button>
+            </button> */}
+            <AnimateButton label="Submit"/>
           </div>
         </form>
       </div>

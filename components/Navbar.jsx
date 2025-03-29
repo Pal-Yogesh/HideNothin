@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#FFFFFF] py-5 px-12">
+    <nav className="bg-[#FFFFFF] py-5 px-6 md:px-12">
       <div className=" flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
@@ -56,9 +56,6 @@ const Navbar = () => {
           <div>
             <AnimateButton label="Contact Us" />
           </div>
-            {/* <div className=" text-[16px] flex justify-center items-center bg-[#EC5B37] hover:bg-[#EC5B37] text-white w-[120px] h-[42px] rounded-full transition-colors duration-300">
-              Contact Us
-            </div> */}
           </Link>
         </div>
 

@@ -138,24 +138,24 @@ const servicesData = {
     image: "/brandinghero.svg",
     faq: [
       {
-        question: "What is Brand Strategy?",
+        question: "Brand Strategy",
         answer:
-          "Brand strategy is a long-term plan for the development of a successful brand to achieve specific goals.",
+          "We dive deep into your market and audience to build a strategic foundation that defines your brand's mission, vision, values, and positioning. Our goal is to create a roadmap for long-term success, ensuring a strong and cohesive identity in a competitive landscape.",
       },
       {
-        question: "What is Visual Identity Design?",
+        question: "Visual Identity Design",
         answer:
-          "Visual identity design includes logo, color palettes, typography, and other visual elements representing your brand.",
+          "A brand is more than just a logo—it's an experience. We craft compelling visual identities that reflect your brand's essence, including logos, color palettes, typography, and design systems, ensuring consistency across all touchpoints.",
       },
       {
-        question: "Why is Brand Storytelling Important?",
+        question: "Brand Storytelling",
         answer:
-          "Brand storytelling creates a deeper emotional connection with your audience, making your brand more memorable.",
+          "Stories connect people. We shape your brand's narrative with messaging that engages, inspires, and builds emotional connections with your audience. Through carefully crafted content and creative storytelling, we help you leave a lasting impression.",
       },
       {
-        question: "What is Packaging and Collateral?",
+        question: "Packaging and Collateral",
         answer:
-          "Packaging and collateral design involve creating physical and digital brand materials like brochures, business cards, and product packaging.",
+          "Your brand's identity should be felt in every interaction. We design packaging and marketing collateral that not only look stunning but also communicate your brand's message effectively, helping you stand out in the market.",
       },
     ],
   },
@@ -164,24 +164,24 @@ const servicesData = {
     image: "/webdesignhero.svg",
     faq: [
       {
-        question: "Why is UX/UI important?",
+        question: "User Research",
         answer:
-          "UX/UI design enhances user experience by making websites intuitive, engaging, and accessible.",
+          "We analyze user behavior, needs, and pain points to create intuitive, engaging experiences. Our research-driven approach ensures every design decision enhances usability and impact.",
       },
       {
-        question: "What is Responsive Web Design?",
+        question: "User Experience (UX) Design",
         answer:
-          "Responsive web design ensures websites look great and function well on all screen sizes.",
+          "We craft seamless navigation, clear layouts, and logical flows to enhance usability. Focusing on accessibility and interaction, we make sure users stay engaged effortlessly.",
       },
       {
-        question: "How does SEO affect web design?",
+        question: "User Interface (UI) Design",
         answer:
-          "Good web design includes SEO best practices for better search engine rankings and visibility.",
+          "Blending aesthetics with functionality, we design modern interfaces that reflect your brand identity. Every element ensures clarity, consistency, and ease of use.",
       },
       {
-        question: "What are the latest trends in Web Design?",
+        question: "Responsive & Adaptive Design",
         answer:
-          "Some trends include dark mode, 3D elements, micro-interactions, and AI-driven personalization.",
+          "Your website will look and function flawlessly across all devices, ensuring a seamless experience on desktops, tablets, and mobiles.",
       },
     ],
   },
@@ -190,24 +190,24 @@ const servicesData = {
     image: "/developmenthero.svg",
     faq: [
       {
-        question: "What is Full-Stack Development?",
+        question: "Front-End Development",
         answer:
-          "Full-stack development covers both front-end and back-end development, ensuring complete project functionality.",
+          "We bring designs to life with clean, responsive, and high-performance code. Our focus is on speed, accessibility, and seamless interactivity across all devices.",
       },
       {
-        question: "What are the benefits of using React?",
+        question: "Back-End Development",
         answer:
-          "React allows for fast, scalable, and modular web applications with a strong developer community.",
+          "Powering your website with scalable, secure, and efficient backend solutions. We ensure smooth data management, robust functionality, and optimal performance.",
       },
       {
-        question: "What is API Development?",
+        question: "CMS & Custom Solutions",
         answer:
-          "API development enables different software systems to communicate and share data efficiently.",
+          "From WordPress to headless CMS, we develop tailored solutions for easy content management, flexibility, and future scalability.",
       },
       {
-        question: "Why is Performance Optimization Important?",
+        question: "Performance & Security Optimization",
         answer:
-          "Performance optimization ensures fast load times, better user experience, and improved SEO rankings.",
+          "We enhance website speed, optimize loading times, and implement security best practices to safeguard data and ensure a seamless user experience.",
       },
     ],
   },

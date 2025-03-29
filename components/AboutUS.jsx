@@ -10,17 +10,17 @@ const timelineData = [
   {
     title: "Our Mission",
     description:
-      "We reimagine your brand's digital presence and change how individuals interact with your brand online in an ever-evolving digital world.",
+      "We empower brands by seamlessly integrating inspired design with advanced technology, crafting digital experiences that captivate and drive success.",
   },
   {
     title: "Our Vision",
     description:
-      "We reimagine your brand's digital presence and change how individuals interact with your brand online in an ever-evolving digital world.",
+      "In a world rapidly shifting online, no one should be left behind. We believe in breaking barriers, making the digital space open, meaningful, and transformative for brands, businesses, and individuals.",
   },
   {
     title: "Our Goal",
     description:
-      "We reimagine your brand's digital presence and change how individuals interact with your brand online in an ever-evolving digital world.",
+      "To craft authentic digital experiences that not only look good but also connect, convert, and create lasting impressions. We are here to help brands grow, stand out, and lead in the digital age.",
   },
 ];
 
@@ -28,21 +28,21 @@ const servicesData = [
   {
     title: "Branding",
     description:
-      "Empowering businesses with distinctive brand identities, compelling visuals, and strategic storytelling to leave a lasting impression and build meaningful connections.",
+      "Strategic brand storytelling that makes your business unforgettable. We create bold, distinct identities that communicate your vision and connect with your audience at every touchpoint.",
     image: "/brandinghero.svg",
     link: "/about/branding",
   },
   {
     title: "Web Design",
     description:
-      "Delivering exceptional web design services that combine stunning visuals, user-centric experiences, and seamless functionality to elevate your online presence and drive engagement.",
+      "We design seamless, visually compelling digital experiences that combine strategy, aesthetics, and usability—ensuring your brand stands out in a crowded online space.",
     image: "/webdesignhero.svg",
     link: "/about/webdesign",
   },
   {
     title: "Development",
     description:
-      "Providing top-notch development services that transform ideas into robust, scalable, and high-performing digital solutions tailored to your business needs.",
+      "From interactive websites to custom-built platforms, we deliver high-performance solutions that enhance user experience and scale with your business growth.",
     image: "/developmenthero.svg",
     link: "/about/development",
   },
@@ -57,7 +57,6 @@ const AboutUS = () => {
       AOS.init({ duration: 1000 });
     }
   }, []);
-  
 
   const timelineItems = timelineData.map((item, index) => {
     const { ref, inView } = useInView({
@@ -77,7 +76,6 @@ const AboutUS = () => {
         key={index}
         className=" duration-1000 text-[#202020] overflow-hidden"
         data-aos="fade-left"
-        
       >
         <h3 className=" text-[24px] mb-4">{item.title}</h3>
         <p className="text-[14px]">{item.description}</p>
@@ -107,12 +105,14 @@ const AboutUS = () => {
             <h2 className="text-[20px] text-[#EC5B37] pb-10 w-[35%] pt-1">
               / <span className="text-[#202020]">about us</span>
             </h2>
-            <div className="text-[#202020] text-[32px] w-[65%]">
+            <div className="text-[#202020] text-[32px] w-[61%]">
               <h2>
-                We are creative designers and technology experts dedicated to{" "}
-                <span className="text-[#EC5B37]">growing</span> your digital{" "}
-                <span className="text-[#EC5B37]">presence</span> by blending
-                inspired design with advanced technology.
+                We are creative designers and tech experts, committed to
+                elevating your{" "}
+                <span className="text-[#FF6A00]">digital presence</span> through
+                <span className="text-[#FF6A00]"> inspired design</span> and
+                <span className="text-[#FF6A00]"> cutting-edge technology.</span>
+                
               </h2>
               <div className="flex gap-16 pt-20" ref={timelineRef}>
                 <div className="relative w-[2px] flex-shrink-0">
@@ -173,8 +173,8 @@ const AboutUS = () => {
           {servicesData.map((service, index) => (
             <div key={index} className="">
               <div>
-                <div data-aos="flip-down"
-                data-aos-duration="2000">
+                <div data-aos="flip-down" data-aos-duration="2000">
+                <Link href={service.link}>
                   <Image
                     src={service.image}
                     width={1000}
@@ -183,6 +183,7 @@ const AboutUS = () => {
                     className="w-full h-full object-cover"
                     priority
                   />
+                  </Link>
                 </div>
                 <div className="flex justify-between py-12 text-[#202020]">
                   <h2 className="text-[24px] bigshoulderdisplay">
@@ -192,13 +193,13 @@ const AboutUS = () => {
                     {service.description}
                   </h2>
                   <Link href={service.link}>
-                  <Image
-                    src="/arrow.svg"
-                    width={1000}
-                    height={1000}
-                    alt="arrow"
-                    className="w-[30px] h-[30px] cursor-pointer"
-                  />
+                    <Image
+                      src="/arrow.svg"
+                      width={1000}
+                      height={1000}
+                      alt="arrow"
+                      className="w-[30px] h-[30px] cursor-pointer"
+                    />
                   </Link>
                 </div>
               </div>

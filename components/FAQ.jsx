@@ -162,19 +162,19 @@ const FAQ = () => {
   };
 
   return (
-    <div className="mt-22 mx-[4%] custombevietnam mb-10">
-      <div className="flex justify-between">
-        <h2 className="text-[20px] text-[#EC5B37] pb-10 w-[40%] pt-1">
+    <div className="mt-10 md:mt-22 mx-[4%] custombevietnam mb-10">
+      <div className="md:flex md:justify-between">
+        <h2 className="text-[20px] text-[#EC5B37] pb-5 md:pb-10 md:w-[40%] md:pt-1">
           / <span className="text-[#202020]">some questions</span>
         </h2>
-        <div className="text-[#202020] text-[32px] w-[60%]">
+        <div className="text-[#202020] text-[20px] md:text-[32px] md:w-[60%]">
           <h2>
             Our <span className="text-[#EC5B37]">FAQ </span>section provides
             clear answers to common questions, helping you find the information
             you need quickly and easily.
           </h2>
 
-          <div className="mt-10 border-b border-[#E2E3E4]">
+          <div className="mt-5 md:mt-10 border-b border-[#E2E3E4]">
             {faqData.map((faq, index) => (
               <div
                 key={index}
@@ -183,7 +183,7 @@ const FAQ = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 50}
               >
-                <div className="flex justify-between items-center text-[#202020] text-[24px]">
+                <div className="flex justify-between items-center text-[#202020] text-[16px] md:text-[24px]">
                   <h3
                     className={`transition-colors duration-500 ease-in-out ${
                       openIndex === index ? "text-[#EC5B37]" : "text-[#202020]"
@@ -192,7 +192,7 @@ const FAQ = () => {
                     {faq.question}
                   </h3>
                   <span
-                    className={`text-[24px] transition-all duration-700 ease-in-out transform ${
+                    className={`text-[16px] md:text-[24px] transition-all duration-700 ease-in-out transform ${
                       openIndex === index ? "text-[#EC5B37] rotate-45" : "rotate-0"
                     }`}
                     style={{
