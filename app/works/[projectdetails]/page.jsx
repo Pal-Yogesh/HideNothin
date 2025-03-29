@@ -161,20 +161,20 @@ export default async function ProjectDetails({ params }) {
   if (!project) return notFound();
 
   return (
-    <div className="px-[4%] py-10 space-y-8">
-      <h1 className="text-[#202020] text-[48px] custombevietnam text-center">
+    <div className="px-[4%] py-10 space-y-5 md:space-y-8">
+      <h2 className="text-[#202020] text-[32px] md:text-[48px] custombevietnam text-center">
         {project.title}
-      </h1>
+      </h2>
 
       {/* Project Info */}
-      <div className="text-center">
-        <p className="text-[20px] text-[#6A6C71]">
+      <div className="text-center text-[16px] md:text-[20px] text-[#6A6C71]">
+        <p className="">
           <strong className="text-[#202020]">Service:</strong> {project.service}
         </p>
-        <p className="text-[20px] text-[#6A6C71]">
+        <p className="">
           <strong className="text-[#202020]">Client:</strong> {project.client}
         </p>
-        <p className="text-[20px] text-[#6A6C71]">
+        <p className="">
           <strong className="text-[#202020]">Year:</strong> {project.year}
         </p>
       </div>
@@ -184,16 +184,20 @@ export default async function ProjectDetails({ params }) {
         width={1000}
         height={500}
         alt={project.title}
-        className="w-full h-[500px] rounded-[20px] object-cover"
+        className="w-full h-[210px] md:h-[500px] rounded-2xl object-cover"
       />
 
       {/* Overview */}
-      <div className="flex justify-between py-10">
-        <h2 className="text-[48px] w-[35%]">Overview</h2>
+      <div className="md:flex md:justify-between  md:py-10">
+        <h2 className="text-[24px] md:text-[48px] md:w-[35%] py-2 md:pb-0">
+          Overview
+        </h2>
 
-        <p className="text-[20px] w-[65%]">{project.overview}</p>
+        <p className="text-[16px] md:text-[20px] md:w-[65%]">
+          {project.overview}
+        </p>
       </div>
-      <div className="flex justify-between gap-4">
+      <div className="flex md:justify-between gap-4">
         {project.extraImages &&
           project.extraImages.map((img, index) => (
             <Image
@@ -202,15 +206,15 @@ export default async function ProjectDetails({ params }) {
               width={1000}
               height={1000}
               alt={`Overview ${index + 1}`}
-              className="w-[50%] h-[346px] rounded-[20px]"
+              className="w-[48%] md:w-[50%] h-[134px] md:h-[346px] rounded-2xl"
             />
           ))}
       </div>
 
       {/* Conclusion */}
-      <div className="flex justify-between py-10">
-        <h2 className="text-[48px] text-[#202020] w-[35%]">Conclusion</h2>
-        <p className="text-[20px] text-[#202020] w-[65%]">
+      <div className="md:flex justify-between md:py-10">
+        <h2 className="text-[24px] md:text-[48px] text-[#202020] md:w-[35%]">Conclusion</h2>
+        <p className= "text-[16px] md:text-[20px] text-[#202020] md:w-[65%] py-3 md:py-0">
           {project.conclusion}
         </p>
       </div>

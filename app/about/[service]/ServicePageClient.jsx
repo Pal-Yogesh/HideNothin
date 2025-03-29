@@ -12,7 +12,7 @@ export default function ServicePageClient({ serviceData }) {
         width={1000}
         height={1000}
         alt={serviceData.title}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-2xl"
       />
       <FAQSection faqs={serviceData.faq} />
     </div>
