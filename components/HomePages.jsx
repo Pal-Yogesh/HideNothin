@@ -8,6 +8,7 @@ import Process from "./Process";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Testimonial from "./Testimonial";
 
 const HomePages = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const HomePages = () => {
       <SelectedWork />
       <Services />
       <Process />
+      <Testimonial />
     </>
   );
 };
