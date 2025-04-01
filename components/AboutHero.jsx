@@ -6,11 +6,8 @@ const AboutHero = () => {
   return (
     <>
       <div className="mt-28 flex md:gap-44 justify-center items-center text-center custombevietnam overflow-hidden">
-        <div
-          data-aos="fade-right"
-          className="w-[240px] h-[2px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-        ></div>
-        <div data-aos="fade-up">
+        <div className="w-[240px] h-[2.5px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"></div>
+        <div>
           <div className="md:w-[533px] px-3 md:px-0">
             <h2 className=" text-[#202020] text-[20px] ">
               <span className="text-[#EC5B37]">/</span>about us
@@ -34,10 +31,7 @@ const AboutHero = () => {
           </div>
         </div>
 
-        <div
-          data-aos="fade-left"
-          className="w-[240px] h-[2px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-        ></div>
+        <div className="w-[240px] h-[2.5px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"></div>
       </div>
     </>
   );

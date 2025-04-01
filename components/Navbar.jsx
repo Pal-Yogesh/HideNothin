@@ -36,11 +36,11 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.svg"
+              src="/HideNothinLogo.png"
               alt="logo"
               width={1000}
               height={1000}
-              className="w-[113px] h-[24px]"
+              className="w-[130px] h-[30px] object-contain"
             />
           </Link>
         </div>

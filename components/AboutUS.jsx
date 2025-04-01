@@ -2,8 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const timelineData = [
   {
@@ -28,11 +27,6 @@ const AboutUS = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const timelineRef = useRef(null);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      AOS.init({ duration: 1000 });
-    }
-  }, []);
 
   const timelineItems = timelineData.map((item, index) => {
     const { ref, inView } = useInView({
@@ -50,8 +44,8 @@ const AboutUS = () => {
       <div
         ref={ref}
         key={index}
-        className=" duration-1000 text-[#202020] overflow-hidden"
-        data-aos="fade-left"
+        className="  text-[#202020] overflow-hidden"
+    
       >
         <h3 className=" text-[24px] mb-4">{item.title}</h3>
         <p className="text-[16px]">{item.description}</p>

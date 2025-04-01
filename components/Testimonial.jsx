@@ -96,11 +96,10 @@ const Testimonial = () => {
         <div className="mx-[4%]">
           <div className="flex justify-center items-center gap-28">
             <div
-              data-aos="fade-right"
               className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
             ></div>
 
-            <div data-aos="fade-up">
+            <div >
               <div className="flex flex-col items-center">
                 <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
@@ -113,7 +112,6 @@ const Testimonial = () => {
             </div>
 
             <div
-              data-aos="fade-left"
               className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
             ></div>
           </div>

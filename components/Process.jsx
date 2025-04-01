@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
@@ -95,12 +96,9 @@ const Process = () => {
       <div className="mt-28 md:mt-40 mx-[4%] overflow-hidden custombevietnam">
         <div>
           <div className="flex justify-center items-center gap-28">
-            <div
-              data-aos="fade-right"
-              className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-            ></div>
+            <div className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"></div>
 
-            <div data-aos="fade-up" className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
               <div className="w-[322px] bigshoulderdisplay text-[64px] lg:text-[96px] text-[#202020] text-center mt-2">
@@ -110,10 +108,7 @@ const Process = () => {
               </div>
             </div>
 
-            <div
-              data-aos="fade-left"
-              className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-            ></div>
+            <div className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"></div>
           </div>
 
           <div className="flex justify-between mt-10 md:mt-20 mb-8">
@@ -150,7 +145,6 @@ const Process = () => {
               ></div>
             </div>
 
-
             {/* Solution Sections */}
             {solutionsData.map((solution, index) => (
               <div
@@ -160,8 +154,6 @@ const Process = () => {
                     ? "opacity-100 translate-y-0"
                     : "opacity-40 translate-y-4"
                 }`}
-                data-aos="fade-up"
-                data-aos-delay={(index * 100).toString()}
               >
                 <div className="hidden lg:block w-[428px] h-[240px] overflow-hidden rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
                   <Image

@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+
 import Link from "next/link";
 
 
@@ -32,11 +31,7 @@ const servicesData = [
 ];
 
 const OurServices = () => {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      AOS.init({ duration: 1000 });
-    }
-  }, []);
+ 
 
   return (
     <>
@@ -44,11 +39,11 @@ const OurServices = () => {
         <div>
           <div className="flex justify-center items-center gap-28">
             <div
-              data-aos="fade-right"
+             
               className="w-[441px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
             ></div>
 
-            <div data-aos="fade-up" className="flex flex-col items-center">
+            <div  className="flex flex-col items-center">
               <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
               <div className="w-[70%] md:w-[322px] bigshoulderdisplay text-[64px] lg:text-[96px] text-[#202020] text-center mt-2">
@@ -59,7 +54,7 @@ const OurServices = () => {
             </div>
 
             <div
-              data-aos="fade-left"
+              
               className="w-[441px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
             ></div>
           </div>
@@ -78,7 +73,7 @@ const OurServices = () => {
           {servicesData.map((service, index) => (
             <div key={index} className="">
               <div>
-                <div data-aos="flip-down" data-aos-duration="2000">
+                <div >
                   <Link href={service.link}>
                     <Image
                       src={service.image}

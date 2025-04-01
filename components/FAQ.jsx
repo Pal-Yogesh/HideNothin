@@ -180,8 +180,7 @@ const FAQ = () => {
                 key={index}
                 className="border-b border-[#E2E3E4] py-7 cursor-pointer overflow-hidden"
                 onClick={() => toggleFAQ(index)}
-                data-aos="fade-up"
-                data-aos-delay={index * 50}
+                
               >
                 <div className="flex justify-between items-center text-[#202020] text-[16px] md:text-[24px]">
                   <h3

@@ -7,11 +7,11 @@ const SelectedWork = () => {
       <div>
         <div className="flex justify-center items-center gap-28">
           <div
-            data-aos="fade-right"
+           
             className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
           ></div>
 
-          <div data-aos="fade-up">
+          <div >
             <div className="flex flex-col items-center">
               <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
@@ -25,7 +25,6 @@ const SelectedWork = () => {
           </div>
 
           <div
-            data-aos="fade-left"
             className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
           ></div>
         </div>
@@ -42,7 +41,7 @@ const SelectedWork = () => {
         </div>
 
         <div className="space-y-10 md:space-y-20">
-          <div data-aos="flip-down">
+          <div >
             <Image
               src="/spectrumstudio.svg"
               alt="spectrumstudio"
@@ -58,7 +57,7 @@ const SelectedWork = () => {
               className="w-full h-full lg:hidden"
             />
           </div>
-          <div data-aos="flip-down">
+          <div >
             <Image
               src="/PrismPulse.svg"
               alt="spectrumstudio"
@@ -76,7 +75,7 @@ const SelectedWork = () => {
               priority
             />
           </div>
-          <div data-aos="flip-down">
+          <div >
             <Image
               src="/MosaicMotion.svg"
               alt="spectrumstudio"
