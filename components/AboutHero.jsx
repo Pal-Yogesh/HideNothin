@@ -25,7 +25,7 @@ const AboutHero = () => {
               innovative digital experiences.
             </h2>
             <div className="flex justify-center items-center mt-10 md:mt-20">
-              <Link href="/contact">
+              <Link href="/about">
                 <div>
                   <AnimateButton label="Discover More" />
                 </div>

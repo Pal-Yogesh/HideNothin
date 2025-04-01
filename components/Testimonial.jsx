@@ -118,7 +118,7 @@ const Testimonial = () => {
             ></div>
           </div>
 
-          <div className="flex justify-between md:items-center mb-10">
+          <div className="flex justify-between md:items-center mt-6 md:mt-0  mb-10">
             <h2 className="text-[20px] custombevietnam text-[#EC5B37]">
               / <span className="text-[#202020]">testimonials</span>
             </h2>

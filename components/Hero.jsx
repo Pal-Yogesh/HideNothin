@@ -37,7 +37,7 @@ const Hero = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center items-center mt-8  lg:absolute lg:top-0 lg:w-[100%] ">
+        <div className="flex justify-center items-center mt-8 md:mt-5  lg:absolute lg:top-0 lg:w-[100%] ">
           <Image
             src="/laptop.svg"
             alt="hero"

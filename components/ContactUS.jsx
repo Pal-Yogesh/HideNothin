@@ -147,13 +147,7 @@ const ContactUS = () => {
             />
           </div>
 
-          <div className="flex justify-end items-center">
-            {/* <button
-              type="submit"
-              className=" w-[102px] h-[48px] text-white bg-[#EC5B37] rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
-            >
-              Submit
-            </button> */}
+          <div className="flex justify-center  md:justify-end items-center">
             <AnimateButton label="Submit" />
           </div>
         </form>

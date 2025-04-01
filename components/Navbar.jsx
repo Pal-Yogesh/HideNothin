@@ -25,12 +25,13 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Services", path: "/our-services" },
     { name: "Works", path: "/works" },
     { name: "Blog", path: "/blog" },
   ];
 
   return (
-    <nav className="bg-[#FFFFFF] py-5 px-6 md:px-12 relative z-50">
+    <nav className="bg-[#FFFFFF] py-5 px-6 md:px-12  z-50 sticky top-0">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
