@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import "./ScrollbarHide.css";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -95,11 +96,19 @@ const Testimonial = () => {
       <div className="mt-32 overflow-hidden">
         <div className="mx-[4%]">
           <div className="flex justify-center items-center gap-28">
-            <div
+            <motion.div
+             initial={{ x: -240, opacity: 0 }}
+             whileInView={{ x: 0, opacity: 1 }}
+             viewport={{ once: false }}
+             transition={{ duration: 0.8, ease: "easeOut" }}
               className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-            ></div>
+            />
 
-            <div >
+            <motion.div  
+            initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} >
               <div className="flex flex-col items-center">
                 <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
@@ -109,11 +118,15 @@ const Testimonial = () => {
                   </h2>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div
-              className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-            ></div>
+            <motion.div
+             initial={{ x: 240, opacity: 0 }}
+             whileInView={{ x: 0, opacity: 1 }}
+             viewport={{ once: false }}
+             transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
+            />
           </div>
 
           <div className="flex justify-between md:items-center mt-6 md:mt-0  mb-10">

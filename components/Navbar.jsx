@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#FFFFFF] py-5 px-6 md:px-12  z-50 sticky top-0">
+    <nav className="bg-[#FFFFFF] py-5 px-4 md:px-6 lg:px-10  z-50 sticky top-0">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
@@ -40,7 +40,7 @@ const Navbar = () => {
               alt="logo"
               width={1000}
               height={1000}
-              className="w-[130px] h-[30px] object-contain"
+              className="w-[80px] md:w-[130px] h-[30px] object-contain"
             />
           </Link>
         </div>

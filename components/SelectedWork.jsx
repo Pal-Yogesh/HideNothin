@@ -1,17 +1,27 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const SelectedWork = () => {
   return (
     <div className="mt-28 md:mt-40 overflow-hidden">
       <div>
         <div className="flex justify-center items-center gap-28">
-          <div
-           
+          <motion.div
             className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-          ></div>
+            initial={{ x: -240, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
 
-          <div >
+          <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          >
             <div className="flex flex-col items-center">
               <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
@@ -22,11 +32,15 @@ const SelectedWork = () => {
                 </h2>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-          ></div>
+            initial={{ x: 240, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
         </div>
       </div>
 
@@ -41,7 +55,7 @@ const SelectedWork = () => {
         </div>
 
         <div className="space-y-10 md:space-y-20">
-          <div >
+          <div>
             <Image
               src="/spectrumstudio.svg"
               alt="spectrumstudio"
@@ -57,7 +71,7 @@ const SelectedWork = () => {
               className="w-full h-full lg:hidden"
             />
           </div>
-          <div >
+          <div>
             <Image
               src="/PrismPulse.svg"
               alt="spectrumstudio"
@@ -75,7 +89,7 @@ const SelectedWork = () => {
               priority
             />
           </div>
-          <div >
+          <div>
             <Image
               src="/MosaicMotion.svg"
               alt="spectrumstudio"

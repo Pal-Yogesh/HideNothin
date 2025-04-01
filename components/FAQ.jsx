@@ -1,112 +1,7 @@
-// import React, { useState } from "react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// import { useEffect } from "react";
-// import { Plus } from "lucide-react";
-
-// const faqData = [
-//   {
-//     question: "What services do you offer?",
-//     answer:
-//       "We offer branding, web design, and development services tailored to your needs.",
-//   },
-//   {
-//     question: "What is your typical project process?",
-//     answer:
-//       "You can reach us via our contact form or email us directly at support@example.com.",
-//   },
-//   {
-//     question: "How long does it take to complete a project?",
-//     answer:
-//       "Yes, we provide custom solutions based on your specific requirements.",
-//   },
-//   {
-//     question: "Do you offer post-launch support and maintenance?",
-//     answer:
-//       "Our pricing depends on the scope of the project. Contact us for a detailed quote.",
-//   },
-//   {
-//     question: "How much do your services cost?",
-//     answer:
-//       "Timelines vary depending on project complexity. We will provide an estimate during the initial consultation.",
-//   },
-//   {
-//     question: "What do I need to prepare before starting a project?",
-//     answer: "Yes, we offer post-launch support and maintenance services.",
-//   },
-// ];
-
-// const FAQ = () => {
-//   const [openIndex, setOpenIndex] = useState(null);
-
-//   useEffect(() => {
-//     AOS.init({ duration: 800, easing: "ease-in-out" });
-//   }, []);
-
-//   const toggleFAQ = (index) => {
-//     setOpenIndex(openIndex === index ? null : index);
-//   };
-
-//   return (
-//     <div className="mt-32 mx-[4%] custombevietnam">
-//       <div className="flex justify-between">
-//         <h2 className="text-[20px] text-[#EC5B37] pb-10 w-[40%] pt-1">
-//           / <span className="text-[#202020]">some questions</span>
-//         </h2>
-//         <div className="text-[#202020] text-[32px] w-[60%]">
-//           <h2>
-//             Our <span className="text-[#EC5B37]">FAQ </span>section provides
-//             clear answers to common questions, helping you find the information
-//             you need quickly and easily.
-//           </h2>
-
-//           <div className="mt-10 border-b border-[#E2E3E4]">
-//             {faqData.map((faq, index) => (
-//               <div
-//                 key={index}
-//                 className="border-b border-[#E2E3E4] py-7 cursor-pointer"
-//                 onClick={() => toggleFAQ(index)}
-//                 data-aos="fade-up"
-//               >
-//                 <div className="flex justify-between items-center text-[#202020] text-[24px] transition-all duration-500 ease-in-out">
-//                   <h3
-//                     className={`transition-colors duration-500 ease-in-out ${
-//                       openIndex === index ? "text-[#EC5B37]" : "text-[#202020]"
-//                     }`}
-//                   >
-//                     {faq.question}
-//                   </h3>
-//                   <span
-//                     className={`text-[24px] transform transition-transform duration-500 ease-in-out ${
-//                       openIndex === index ? "rotate-45" : "rotate-0"
-//                     }`}
-//                   >
-//                     <Plus />
-//                   </span>
-//                 </div>
-//                 {openIndex === index && (
-//                  <div
-//                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-//                    openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-//                  }`}
-//                >
-//                  <p className="mt-4 text-[#555] text-[18px]">{faq.answer}</p>
-//                </div>
-               
-//                 )}
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FAQ;
 "use client"
 import React, { useState, useRef, useEffect } from "react";
 import { Plus } from "lucide-react";
+import { motion } from "framer-motion";
 
 const faqData = [
   {
@@ -145,8 +40,6 @@ const FAQ = () => {
   const [heights, setHeights] = useState({});
   const contentRefs = useRef([]);
 
-  
-
   useEffect(() => {
     const newHeights = {};
     contentRefs.current.forEach((ref, index) => {
@@ -161,26 +54,61 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1], // Custom easing
+      }
+    },
+  };
+
   return (
-    <div className="mt-10 md:mt-22 mx-[4%] custombevietnam mb-10">
+    <motion.div 
+      className="mt-10 md:mt-22 mx-[4%] custombevietnam mb-10"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false}}
+      variants={containerVariants}
+    >
       <div className="md:flex md:justify-between">
-        <h2 className="text-[20px] text-[#EC5B37] pb-5 md:pb-10 md:w-[40%] md:pt-1">
+        <motion.h2 
+          className="text-[20px] text-[#EC5B37] pb-5 md:pb-10 md:w-[40%] md:pt-1"
+          variants={itemVariants}
+        >
           / <span className="text-[#202020]">some questions</span>
-        </h2>
+        </motion.h2>
         <div className="text-[#202020] text-[20px] md:text-[32px] md:w-[60%]">
-          <h2>
+          <motion.h2 variants={itemVariants}>
             Our <span className="text-[#EC5B37]">FAQ </span>section provides
             clear answers to common questions, helping you find the information
             you need quickly and easily.
-          </h2>
+          </motion.h2>
 
-          <div className="mt-5 md:mt-10 border-b border-[#E2E3E4]">
+          <motion.div 
+            className="mt-5 md:mt-10 border-b border-[#E2E3E4]"
+            variants={containerVariants}
+          >
             {faqData.map((faq, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="border-b border-[#E2E3E4] py-7 cursor-pointer overflow-hidden"
                 onClick={() => toggleFAQ(index)}
-                
+                variants={itemVariants}
               >
                 <div className="flex justify-between items-center text-[#202020] text-[16px] md:text-[24px]">
                   <h3
@@ -223,12 +151,12 @@ const FAQ = () => {
                     <p className="mt-4 text-[#555] text-[18px]">{faq.answer}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

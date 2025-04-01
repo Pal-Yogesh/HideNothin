@@ -3,8 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import Link from "next/link";
-
-
+import { motion } from "framer-motion";
 
 const servicesData = [
   {
@@ -31,32 +30,42 @@ const servicesData = [
 ];
 
 const OurServices = () => {
- 
-
   return (
     <>
       <div className=" px-[4%] mt-16 md:mt-24 custombevietnam overflow-hidden">
         <div>
           <div className="flex justify-center items-center gap-28">
-            <div
-             
+            <motion.div
+              initial={{ x: -240, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="w-[441px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-            ></div>
+            />
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            >
+              <div className="flex flex-col items-center">
+                <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
-            <div  className="flex flex-col items-center">
-              <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
-
-              <div className="w-[70%] md:w-[322px] bigshoulderdisplay text-[64px] lg:text-[96px] text-[#202020] text-center mt-2">
-                <h2>
-                  Our <span className="text-[#EC5B37]">Services</span>{" "}
-                </h2>
+                <div className="w-[70%] md:w-[322px] bigshoulderdisplay text-[64px] lg:text-[96px] text-[#202020] text-center mt-2">
+                  <h2>
+                    Our <span className="text-[#EC5B37]">Services</span>{" "}
+                  </h2>
+                </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div
-              
+            <motion.div
+              initial={{ x: 240, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="w-[441px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
-            ></div>
+            />
           </div>
 
           <div className="flex justify-between items-center mb-14">
@@ -73,7 +82,7 @@ const OurServices = () => {
           {servicesData.map((service, index) => (
             <div key={index} className="">
               <div>
-                <div >
+                <div>
                   <Link href={service.link}>
                     <Image
                       src={service.image}

@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Process = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -96,19 +97,39 @@ const Process = () => {
       <div className="mt-28 md:mt-40 mx-[4%] overflow-hidden custombevietnam">
         <div>
           <div className="flex justify-center items-center gap-28">
-            <div className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"></div>
+            <motion.div
+              initial={{ x: -240, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="w-[414px] h-[3px] bg-gradient-to-r from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
+            />
 
-            <div className="flex flex-col items-center">
-              <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            >
+              <div className="flex flex-col items-center">
+                <div className="w-[3px] h-[86px] bg-gradient-to-b from-[#EC5B37] to-[#FFFFFF] "></div>
 
-              <div className="w-[322px] bigshoulderdisplay text-[64px] lg:text-[96px] text-[#202020] text-center mt-2">
-                <h2 className="leading-tight">
-                  Our <span className="text-[#EC5B37]">Solutions</span> For You{" "}
-                </h2>
+                <div className="w-[322px] bigshoulderdisplay text-[64px] lg:text-[96px] text-[#202020] text-center mt-2">
+                  <h2 className="leading-tight">
+                    Our <span className="text-[#EC5B37]">Solutions</span> For
+                    You{" "}
+                  </h2>
+                </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"></div>
+            <motion.div
+              initial={{ x: 240, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="w-[414px] h-[3px] bg-gradient-to-l from-[#EC5B37] to-[#FFFFFF] hidden xl:block"
+            />
           </div>
 
           <div className="flex justify-between mt-10 md:mt-20 mb-8">
@@ -152,7 +173,7 @@ const Process = () => {
                 className={`solution-section flex gap-16 mb-20 md:mb-32 px-10 py-1 md:py-8 transition-all duration-700 ease-in-out ${
                   index === activeIndex
                     ? "opacity-100 translate-y-0"
-                    : "opacity-40 translate-y-4"
+                    : "opacity-80 translate-y-4"
                 }`}
               >
                 <div className="hidden lg:block w-[428px] h-[240px] overflow-hidden rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
